@@ -1,14 +1,39 @@
 
+# [] aggregation
+AGG_DIR=nf_prize_dataset
+AGG_TMP=workDir
+agg:
+	mkdir $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set01.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set02.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set03.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set04.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set05.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set06.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set07.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set08.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set09.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set10.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set11.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set12.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set13.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set14.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set15.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set16.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set17.tgz --directory  $(AGG_TMP)
+	tar -xzvf $(AGG_DIR)/training_set18.tgz --directory  $(AGG_TMP)
 
-get:
 
+
+# [] creatinion
 DOWN_DIR=download
-extract:
+create.extract:
 	tar -xzvf nf_prize_dataset.tar.gz
 	tar -xvf $(DOWN_DIR)/training_set.tar --directory $(DOWN_DIR)
 
 
-partition:
+create.partition:
 	mkdir $(DOWN_DIR)/training_set01
 	mkdir $(DOWN_DIR)/training_set02
 	mkdir $(DOWN_DIR)/training_set03
@@ -74,3 +99,6 @@ targz:
 
 clean:
 	find ./ -name "*~" -delete
+
+
+
